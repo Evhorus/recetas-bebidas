@@ -7,7 +7,7 @@ import {
 import { Drink, SearchFilter } from "../types";
 
 export const getCategories = async () => {
-  const url = "https:www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
+  const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
   const { data } = await axios(url);
   const result = CategoriesApiResponseSchema.safeParse(data);
   if (result.success) {
